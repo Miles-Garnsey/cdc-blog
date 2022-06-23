@@ -1,0 +1,4 @@
+resources:
+- github.com/cert-manager/cert-manager/releases/download/v1.7.1/cert-manager.yaml
+- github.com/k8ssandra/cass-operator/config/deployments/cluster?ref=v1.11.0
+
