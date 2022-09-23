@@ -2,7 +2,6 @@ apiVersion: cassandra.datastax.com/v1beta1
 kind: CassandraDatacenter
 metadata:
   name: dc1
-  namespace: cass-operator
 spec:
   clusterName: test-cluster
   size: 3
@@ -15,9 +14,8 @@ spec:
         requests:
           storage: 1Gi
   cdc:
-    enabled: true
     pulsarServiceUrl: pulsar://pulsar-proxy.pulsar.svc.cluster.local:6650
     topicPrefix: persistent://public/default/events-
     cdcWorkingDir: /var/lib/cassandra/cdc
-  serverVersion: "4.0.1"
+  serverVersion: "4.0.4"
   serverType: "cassandra"
